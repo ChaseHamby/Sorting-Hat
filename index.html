@@ -51,20 +51,22 @@
             <a class="btn btn-primary btn-lg" href="#" role="button" onclick="showForm()">Get Sorted!</a>
             </div>
 
-    <form id="student-form" style="display:none">
+    <form id="student-form" style="display:none" class="border border-dark m-3">
         <h2 class="d-flex justify-content-center">Enter First Year's Name</h2>
         <div class="d-flex justify-content-center p-3">
             <div class="form-group ml-3">
                 <label for="student-name" class="sr-only">Student</label>
-                <input type="text" readonly class="form-control-plaintext" id="student-name" placeholder="Student:">
+                <input type="text" readonly class="form-control-plaintext" id="studentInput" placeholder="Student:">
             </div>
             <div class="form-group mx-sm-3 mb-2 w-25">
                 <label for="inputPassword2" class="sr-only">Text</label>
-                <input type="text" class="form-control" id="input-name" placeholder="Your Name">
+                <input type="text" class="form-control" id="studentName" placeholder="Your Name">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Sort!</button>
+            <button type="submit" id="sortButton" class="btn btn-primary mb-2">Sort!</button>
         </div>
     </form>
+
+    <div id="studentCards"></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
