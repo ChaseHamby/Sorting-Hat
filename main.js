@@ -10,11 +10,9 @@ const printToDom = (stringToPrint, emptyDiv) => {
     document.getElementById(emptyDiv).innerHTML += stringToPrint;
 }
 
-// Making element for pulling text input from text area box //
+// Elements //
 
-const nameInputElem = document.getElementById('studentName');
-
-// Making element for pulling info from sortButton //
+const nameInputElem = document.getElementById('studentName').value;
 
 const sortButtonElem = document.getElementById('sortButton');
 
@@ -23,10 +21,11 @@ let counter = 0;
 // Student Card function using Bootstrap below //
 
 const buildStudentCard = () => {
+  const schools = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"][Math.floor(Math.random() * 4)];
     let domString = `<div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text">${studentName}</p>
+      <h5 class="card-title">${studentName.value}</h5>
+      <p class="card-text">${schools}</p>
       <a href="#" class="btn btn-primary">Expel</a>
     </div>
   </div>`;
@@ -35,22 +34,8 @@ const buildStudentCard = () => {
   printToDom(domString,'studentCards');
 };
 
-  sortButtonElem.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    buildStudentCard(nameInputElem.value); 
-    })
+sortButtonElem.addEventListener("click", (e) => {
+  e.preventDefault(); 
+  buildStudentCard(nameInputElem.value); 
+});
 
-
-
-// document.getElementsByTagName('form')[0].addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     buildStudentCard(nameInputElem.value); 
-// });
-
-// const houseSelection = () => {
-//     let randomizer = math.floor(Math.random()+4);
-//     if (randomizer === 1) {
-//         gryffindorStringBuilder
-//     } else if (random === 2}
-//         slytherinStringBuilder
-//         // keep going //
