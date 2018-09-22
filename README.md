@@ -4,8 +4,6 @@ This project is an introduction to using Bootstrap and adding event listeners. T
 
 ## Screenshots
 <img width="1431" alt="screen shot 2018-09-22 at 10 01 16 am" src="https://user-images.githubusercontent.com/16019344/45919470-27924980-be5b-11e8-984b-f865bc067f5b.png">
-
-
 <img width="1425" alt="screen shot 2018-09-22 at 10 02 03 am" src="https://user-images.githubusercontent.com/16019344/45919467-0e899880-be5b-11e8-81b5-6179598b27b5.png">
 
 ## Technical Requirements
